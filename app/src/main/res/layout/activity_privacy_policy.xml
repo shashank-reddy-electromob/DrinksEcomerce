@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PrivacyPolicy">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/privacy_policy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#11CFC5"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="Madhushala"
+            android:textColor="#fff"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Privacy policy"
+        android:textStyle="bold"
+        android:textSize="26dp"
+        android:layout_margin="10dp"
+        android:textColor="#000"
+        android:layout_below="@id/privacy_policy"
+        android:gravity="center"/>
+
+
+</RelativeLayout>

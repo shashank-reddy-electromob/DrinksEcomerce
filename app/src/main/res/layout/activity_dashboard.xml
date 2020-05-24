@@ -1,0 +1,1594 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DashboardActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/dasdboardbar"
+        android:layout_width="match_parent"
+        android:background="#11CFC5"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="#11CFC5"
+            android:src="@drawable/ic_menu_foreground"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.064" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Madhushala"
+            android:textColor="#fff"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.397"
+            app:layout_constraintStart_toEndOf="@+id/imageView"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.521" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_notifications_foreground"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.618"
+            app:layout_constraintStart_toEndOf="@+id/textView"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/cart_activity"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_cart_foreground"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/imageView2"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/location_cardview"
+        android:layout_below="@+id/dasdboardbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:cardview="http://schemas.android.com/apk/res-auto"
+        app:cardElevation="25dp"
+        android:layout_margin="2dp"
+        android:layout_marginTop="5dp"
+        cardview:cardCornerRadius="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:padding="2dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_locate_foreground"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hyderabad"
+                    android:textSize="15dp"
+                    android:textStyle="bold"
+                    android:textColor="#fff"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Searching in this particular location!"
+                    android:textSize="12dp"
+                    android:textColor="#fff"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <ScrollView
+        android:layout_above="@+id/bottomnavigation"
+        android:layout_below="@+id/location_cardview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="10dp"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                xmlns:cardview="http://schemas.android.com/apk/res-auto"
+                app:cardElevation="15dp"
+                android:layout_marginTop="5dp"
+                cardview:cardCornerRadius="2dp">
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none"
+                    android:id="@+id/promotions">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scrollbars="none"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="390dp"
+                            android:layout_height="150dp"
+                            android:scaleType="centerCrop"
+                            android:adjustViewBounds="true"
+                            android:layout_margin="10dp"
+                            android:src="@drawable/beerpromotions2" />
+
+                        <ImageView
+                            android:layout_width="390dp"
+                            android:layout_height="150dp"
+                            android:scaleType="centerCrop"
+                            android:adjustViewBounds="true"
+                            android:layout_margin="10dp"
+                            android:src="@drawable/beerpromotions3" />
+
+                        <ImageView
+                            android:layout_width="390dp"
+                            android:layout_height="150dp"
+                            android:scaleType="centerCrop"
+                            android:adjustViewBounds="true"
+                            android:layout_margin="10dp"
+                            android:src="@drawable/beerpromotions2" />
+
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                xmlns:cardview="http://schemas.android.com/apk/res-auto"
+                app:cardElevation="15dp"
+                android:layout_marginTop="8dp"
+                cardview:cardCornerRadius="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Drinks and Refreshments:"
+                        android:textColor="#000"
+                        android:textStyle="bold"
+                        android:textSize="18dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginStart="15dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="2"
+                        android:layout_marginTop="4dp"
+                        android:orientation="horizontal">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            xmlns:cardview="http://schemas.android.com/apk/res-auto"
+                            app:cardElevation="20dp"
+                            android:layout_margin="5dp"
+                            android:padding="3dp"
+                            cardview:cardCornerRadius="5dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="180dp"
+                                    android:src="@drawable/beericon"/>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="#00ADC1"
+                                    android:layout_gravity="start"
+                                    android:layout_marginTop="3dp"
+                                    android:orientation="horizontal"
+                                    android:weightSum="2">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Kingfisher\nRs 100"
+                                        android:textStyle="normal"
+                                        android:padding="5dp"
+                                        android:paddingStart="15dp"
+                                        android:layout_weight="1.7"
+                                        android:textSize="14dp"
+                                        android:textColor="#000"
+                                        android:layout_gravity="center"
+                                        android:gravity="start"/>
+
+                                    <ImageView
+                                        android:layout_width="50dp"
+                                        android:layout_height="40dp"
+                                        android:layout_weight="0.3"
+                                        android:layout_gravity="center"
+                                        android:src="@drawable/ic_add_foreground"/>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            xmlns:cardview="http://schemas.android.com/apk/res-auto"
+                            app:cardElevation="20dp"
+                            android:layout_margin="5dp"
+                            android:padding="3dp"
+                            cardview:cardCornerRadius="5dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="180dp"
+                                    android:src="@drawable/beericon"/>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="#00ADC1"
+                                    android:layout_gravity="start"
+                                    android:layout_marginTop="3dp"
+                                    android:orientation="horizontal"
+                                    android:weightSum="2">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Kingfisher\nRs 100"
+                                        android:textStyle="normal"
+                                        android:padding="5dp"
+                                        android:paddingStart="15dp"
+                                        android:layout_weight="1.7"
+                                        android:textSize="14dp"
+                                        android:textColor="#000"
+                                        android:layout_gravity="center"
+                                        android:gravity="start"/>
+
+                                    <ImageView
+                                        android:layout_width="50dp"
+                                        android:layout_height="40dp"
+                                        android:layout_weight="0.3"
+                                        android:layout_gravity="center"
+                                        android:src="@drawable/ic_add_foreground"/>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="2"
+                        android:layout_marginTop="4dp"
+                        android:orientation="horizontal">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            xmlns:cardview="http://schemas.android.com/apk/res-auto"
+                            app:cardElevation="20dp"
+                            android:layout_margin="5dp"
+                            android:padding="3dp"
+                            cardview:cardCornerRadius="5dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="180dp"
+                                    android:src="@drawable/beericon"/>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="#00ADC1"
+                                    android:layout_gravity="start"
+                                    android:layout_marginTop="3dp"
+                                    android:orientation="horizontal"
+                                    android:weightSum="2">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Kingfisher\nRs 100"
+                                        android:textStyle="normal"
+                                        android:padding="5dp"
+                                        android:paddingStart="15dp"
+                                        android:layout_weight="1.7"
+                                        android:textSize="14dp"
+                                        android:textColor="#000"
+                                        android:layout_gravity="center"
+                                        android:gravity="start"/>
+
+                                    <ImageView
+                                        android:layout_width="50dp"
+                                        android:layout_height="40dp"
+                                        android:layout_weight="0.3"
+                                        android:layout_gravity="center"
+                                        android:src="@drawable/ic_add_foreground"/>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            xmlns:cardview="http://schemas.android.com/apk/res-auto"
+                            app:cardElevation="20dp"
+                            android:layout_margin="5dp"
+                            android:padding="3dp"
+                            cardview:cardCornerRadius="5dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="180dp"
+                                    android:src="@drawable/beericon"/>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="#00ADC1"
+                                    android:layout_gravity="start"
+                                    android:layout_marginTop="3dp"
+                                    android:orientation="horizontal"
+                                    android:weightSum="2">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Kingfisher\nRs 100"
+                                        android:textStyle="normal"
+                                        android:padding="5dp"
+                                        android:paddingStart="15dp"
+                                        android:layout_weight="1.7"
+                                        android:textSize="14dp"
+                                        android:textColor="#000"
+                                        android:layout_gravity="center"
+                                        android:gravity="start"/>
+
+                                    <ImageView
+                                        android:layout_width="50dp"
+                                        android:layout_height="40dp"
+                                        android:layout_weight="0.3"
+                                        android:layout_gravity="center"
+                                        android:src="@drawable/ic_add_foreground"/>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="2"
+                        android:layout_marginTop="4dp"
+                        android:orientation="horizontal">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            xmlns:cardview="http://schemas.android.com/apk/res-auto"
+                            app:cardElevation="20dp"
+                            android:layout_margin="5dp"
+                            android:padding="3dp"
+                            cardview:cardCornerRadius="5dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="180dp"
+                                    android:src="@drawable/beericon"/>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="#00ADC1"
+                                    android:layout_gravity="start"
+                                    android:layout_marginTop="3dp"
+                                    android:orientation="horizontal"
+                                    android:weightSum="2">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Kingfisher\nRs 100"
+                                        android:textStyle="normal"
+                                        android:padding="5dp"
+                                        android:paddingStart="15dp"
+                                        android:layout_weight="1.7"
+                                        android:textSize="14dp"
+                                        android:textColor="#000"
+                                        android:layout_gravity="center"
+                                        android:gravity="start"/>
+
+                                    <ImageView
+                                        android:layout_width="50dp"
+                                        android:layout_height="40dp"
+                                        android:layout_weight="0.3"
+                                        android:layout_gravity="center"
+                                        android:src="@drawable/ic_add_foreground"/>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            xmlns:cardview="http://schemas.android.com/apk/res-auto"
+                            app:cardElevation="20dp"
+                            android:layout_margin="5dp"
+                            android:padding="3dp"
+                            cardview:cardCornerRadius="5dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="180dp"
+                                    android:src="@drawable/beericon"/>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="#00ADC1"
+                                    android:layout_gravity="start"
+                                    android:layout_marginTop="3dp"
+                                    android:orientation="horizontal"
+                                    android:weightSum="2">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Kingfisher\nRs 100"
+                                        android:textStyle="normal"
+                                        android:padding="5dp"
+                                        android:paddingStart="15dp"
+                                        android:layout_weight="1.7"
+                                        android:textSize="14dp"
+                                        android:textColor="#000"
+                                        android:layout_gravity="center"
+                                        android:gravity="start"/>
+
+                                    <ImageView
+                                        android:layout_width="50dp"
+                                        android:layout_height="40dp"
+                                        android:layout_weight="0.3"
+                                        android:layout_gravity="center"
+                                        android:src="@drawable/ic_add_foreground"/>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="2"
+                        android:layout_marginTop="4dp"
+                        android:orientation="horizontal">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            xmlns:cardview="http://schemas.android.com/apk/res-auto"
+                            app:cardElevation="20dp"
+                            android:layout_margin="5dp"
+                            android:padding="3dp"
+                            cardview:cardCornerRadius="5dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="180dp"
+                                    android:src="@drawable/beericon"/>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="#00ADC1"
+                                    android:layout_gravity="start"
+                                    android:layout_marginTop="3dp"
+                                    android:orientation="horizontal"
+                                    android:weightSum="2">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Kingfisher\nRs 100"
+                                        android:textStyle="normal"
+                                        android:padding="5dp"
+                                        android:paddingStart="15dp"
+                                        android:layout_weight="1.7"
+                                        android:textSize="14dp"
+                                        android:textColor="#000"
+                                        android:layout_gravity="center"
+                                        android:gravity="start"/>
+
+                                    <ImageView
+                                        android:layout_width="50dp"
+                                        android:layout_height="40dp"
+                                        android:layout_weight="0.3"
+                                        android:layout_gravity="center"
+                                        android:src="@drawable/ic_add_foreground"/>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            xmlns:cardview="http://schemas.android.com/apk/res-auto"
+                            app:cardElevation="20dp"
+                            android:layout_margin="5dp"
+                            android:padding="3dp"
+                            cardview:cardCornerRadius="5dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="180dp"
+                                    android:src="@drawable/beericon"/>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="#00ADC1"
+                                    android:layout_gravity="start"
+                                    android:layout_marginTop="3dp"
+                                    android:orientation="horizontal"
+                                    android:weightSum="2">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Kingfisher\nRs 100"
+                                        android:textStyle="normal"
+                                        android:padding="5dp"
+                                        android:paddingStart="15dp"
+                                        android:layout_weight="1.7"
+                                        android:textSize="14dp"
+                                        android:textColor="#000"
+                                        android:layout_gravity="center"
+                                        android:gravity="start"/>
+
+                                    <ImageView
+                                        android:layout_width="50dp"
+                                        android:layout_height="40dp"
+                                        android:layout_weight="0.3"
+                                        android:layout_gravity="center"
+                                        android:src="@drawable/ic_add_foreground"/>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="2"
+                        android:layout_marginTop="4dp"
+                        android:orientation="horizontal">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            xmlns:cardview="http://schemas.android.com/apk/res-auto"
+                            app:cardElevation="20dp"
+                            android:layout_margin="5dp"
+                            android:padding="3dp"
+                            cardview:cardCornerRadius="5dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="180dp"
+                                    android:src="@drawable/beericon"/>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="#00ADC1"
+                                    android:layout_gravity="start"
+                                    android:layout_marginTop="3dp"
+                                    android:orientation="horizontal"
+                                    android:weightSum="2">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Kingfisher\nRs 100"
+                                        android:textStyle="normal"
+                                        android:padding="5dp"
+                                        android:paddingStart="15dp"
+                                        android:layout_weight="1.7"
+                                        android:textSize="14dp"
+                                        android:textColor="#000"
+                                        android:layout_gravity="center"
+                                        android:gravity="start"/>
+
+                                    <ImageView
+                                        android:layout_width="50dp"
+                                        android:layout_height="40dp"
+                                        android:layout_weight="0.3"
+                                        android:layout_gravity="center"
+                                        android:src="@drawable/ic_add_foreground"/>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            xmlns:cardview="http://schemas.android.com/apk/res-auto"
+                            app:cardElevation="20dp"
+                            android:layout_margin="5dp"
+                            android:padding="3dp"
+                            cardview:cardCornerRadius="5dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="180dp"
+                                    android:src="@drawable/beericon"/>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="#00ADC1"
+                                    android:layout_gravity="start"
+                                    android:layout_marginTop="3dp"
+                                    android:orientation="horizontal"
+                                    android:weightSum="2">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Kingfisher\nRs 100"
+                                        android:textStyle="normal"
+                                        android:padding="5dp"
+                                        android:paddingStart="15dp"
+                                        android:layout_weight="1.7"
+                                        android:textSize="14dp"
+                                        android:textColor="#000"
+                                        android:layout_gravity="center"
+                                        android:gravity="start"/>
+
+                                    <ImageView
+                                        android:layout_width="50dp"
+                                        android:layout_height="40dp"
+                                        android:layout_weight="0.3"
+                                        android:layout_gravity="center"
+                                        android:src="@drawable/ic_add_foreground"/>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+           <!-- <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:src="@drawable/ic_drink_foreground"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="Beer"
+                    android:layout_marginEnd="10dp"
+                    android:textSize="18dp"
+                    android:layout_gravity="center"
+                    android:textStyle="normal"
+                    android:textColor="@color/colorPrimary"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="see all"
+                    android:layout_marginEnd="10dp"
+                    android:gravity="end"
+                    android:textSize="18dp"
+                    android:layout_gravity="center"
+                    android:textStyle="normal"
+                    android:textColor="@color/colorPrimary"/>
+
+            </LinearLayout>
+
+            <HorizontalScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:scrollbars="none"
+                android:id="@+id/hsvposts">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        xmlns:cardview="http://schemas.android.com/apk/res-auto"
+                        android:layout_margin="5dp"
+                        app:cardElevation="15dp"
+                        cardview:cardCornerRadius="10dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="100dp"
+                                android:layout_height="120dp"
+                                android:layout_margin="5dp"
+                                android:src="@drawable/beericon"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Kingfisher: 100"
+                                android:gravity="center"
+                                android:layout_gravity="center"
+                                android:textColor="#000"
+                                android:layout_marginBottom="5dp"
+                                android:textSize="14dp"/>
+
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        xmlns:cardview="http://schemas.android.com/apk/res-auto"
+                        android:layout_margin="5dp"
+                        app:cardElevation="15dp"
+                        cardview:cardCornerRadius="10dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="100dp"
+                                android:layout_height="120dp"
+                                android:layout_margin="5dp"
+                                android:src="@drawable/beericon"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Kingfisher: 100"
+                                android:gravity="center"
+                                android:layout_gravity="center"
+                                android:textColor="#000"
+                                android:layout_marginBottom="5dp"
+                                android:textSize="14dp"/>
+
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        xmlns:cardview="http://schemas.android.com/apk/res-auto"
+                        android:layout_margin="5dp"
+                        app:cardElevation="15dp"
+                        cardview:cardCornerRadius="10dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="100dp"
+                                android:layout_height="120dp"
+                                android:layout_margin="5dp"
+                                android:src="@drawable/beericon"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Kingfisher: 100"
+                                android:gravity="center"
+                                android:layout_gravity="center"
+                                android:textColor="#000"
+                                android:layout_marginBottom="5dp"
+                                android:textSize="14dp"/>
+
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        xmlns:cardview="http://schemas.android.com/apk/res-auto"
+                        android:layout_margin="5dp"
+                        app:cardElevation="15dp"
+                        cardview:cardCornerRadius="10dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="100dp"
+                                android:layout_height="120dp"
+                                android:layout_margin="5dp"
+                                android:src="@drawable/beericon"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Kingfisher: 100"
+                                android:gravity="center"
+                                android:layout_gravity="center"
+                                android:textColor="#000"
+                                android:layout_marginBottom="5dp"
+                                android:textSize="14dp"/>
+
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        xmlns:cardview="http://schemas.android.com/apk/res-auto"
+                        android:layout_margin="5dp"
+                        app:cardElevation="15dp"
+                        cardview:cardCornerRadius="10dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="100dp"
+                                android:layout_height="120dp"
+                                android:layout_margin="5dp"
+                                android:src="@drawable/beericon"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Kingfisher: 100"
+                                android:gravity="center"
+                                android:layout_gravity="center"
+                                android:textColor="#000"
+                                android:layout_marginBottom="5dp"
+                                android:textSize="14dp"/>
+
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:src="@drawable/ic_drink_foreground"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="Wine"
+                    android:layout_marginEnd="10dp"
+                    android:textSize="18dp"
+                    android:layout_gravity="center"
+                    android:textStyle="normal"
+                    android:textColor="@color/colorPrimary"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="see all"
+                    android:layout_marginEnd="10dp"
+                    android:gravity="end"
+                    android:textSize="18dp"
+                    android:layout_gravity="center"
+                    android:textStyle="normal"
+                    android:textColor="@color/colorPrimary"/>
+
+            </LinearLayout>
+
+            <HorizontalScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:scrollbars="none"
+                android:id="@+id/hsvpostsvideos">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        xmlns:cardview="http://schemas.android.com/apk/res-auto"
+                        android:layout_margin="5dp"
+                        app:cardElevation="15dp"
+                        cardview:cardCornerRadius="10dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="100dp"
+                                android:layout_height="120dp"
+                                android:layout_margin="5dp"
+                                android:src="@drawable/beericon"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Kingfisher: 100"
+                                android:gravity="center"
+                                android:layout_gravity="center"
+                                android:textColor="#000"
+                                android:layout_marginBottom="5dp"
+                                android:textSize="14dp"/>
+
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        xmlns:cardview="http://schemas.android.com/apk/res-auto"
+                        android:layout_margin="5dp"
+                        app:cardElevation="15dp"
+                        cardview:cardCornerRadius="10dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="100dp"
+                                android:layout_height="120dp"
+                                android:layout_margin="5dp"
+                                android:src="@drawable/beericon"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Kingfisher: 100"
+                                android:gravity="center"
+                                android:layout_gravity="center"
+                                android:textColor="#000"
+                                android:layout_marginBottom="5dp"
+                                android:textSize="14dp"/>
+
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        xmlns:cardview="http://schemas.android.com/apk/res-auto"
+                        android:layout_margin="5dp"
+                        app:cardElevation="15dp"
+                        cardview:cardCornerRadius="10dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="100dp"
+                                android:layout_height="120dp"
+                                android:layout_margin="5dp"
+                                android:src="@drawable/beericon"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Kingfisher: 100"
+                                android:gravity="center"
+                                android:layout_gravity="center"
+                                android:textColor="#000"
+                                android:layout_marginBottom="5dp"
+                                android:textSize="14dp"/>
+
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        xmlns:cardview="http://schemas.android.com/apk/res-auto"
+                        android:layout_margin="5dp"
+                        app:cardElevation="15dp"
+                        cardview:cardCornerRadius="10dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="100dp"
+                                android:layout_height="120dp"
+                                android:layout_margin="5dp"
+                                android:src="@drawable/beericon"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Kingfisher: 100"
+                                android:gravity="center"
+                                android:layout_gravity="center"
+                                android:textColor="#000"
+                                android:layout_marginBottom="5dp"
+                                android:textSize="14dp"/>
+
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        xmlns:cardview="http://schemas.android.com/apk/res-auto"
+                        android:layout_margin="5dp"
+                        app:cardElevation="15dp"
+                        cardview:cardCornerRadius="10dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="100dp"
+                                android:layout_height="120dp"
+                                android:layout_margin="5dp"
+                                android:src="@drawable/beericon"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Kingfisher: 100"
+                                android:gravity="center"
+                                android:layout_gravity="center"
+                                android:textColor="#000"
+                                android:layout_marginBottom="5dp"
+                                android:textSize="14dp"/>
+
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:src="@drawable/ic_discountsuu_foreground"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="Discountes"
+                    android:layout_marginEnd="10dp"
+                    android:textSize="18dp"
+                    android:layout_gravity="center"
+                    android:textStyle="normal"
+                    android:textColor="@color/colorPrimary"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="see all"
+                    android:layout_marginEnd="10dp"
+                    android:gravity="end"
+                    android:textSize="18dp"
+                    android:layout_gravity="center"
+                    android:textStyle="normal"
+                    android:textColor="@color/colorPrimary"/>
+
+            </LinearLayout>
+
+            <HorizontalScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:scrollbars="none"
+                android:layout_marginBottom="10dp"
+                android:id="@+id/hsvpostsreeciepies">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        xmlns:cardview="http://schemas.android.com/apk/res-auto"
+                        android:layout_margin="5dp"
+                        app:cardElevation="15dp"
+                        cardview:cardCornerRadius="10dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="100dp"
+                                android:layout_height="120dp"
+                                android:layout_margin="5dp"
+                                android:src="@drawable/beericon"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Kingfisher: 100"
+                                android:gravity="center"
+                                android:layout_gravity="center"
+                                android:textColor="#000"
+                                android:layout_marginBottom="5dp"
+                                android:textSize="14dp"/>
+
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        xmlns:cardview="http://schemas.android.com/apk/res-auto"
+                        android:layout_margin="5dp"
+                        app:cardElevation="15dp"
+                        cardview:cardCornerRadius="10dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="100dp"
+                                android:layout_height="120dp"
+                                android:layout_margin="5dp"
+                                android:src="@drawable/beericon"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Kingfisher: 100"
+                                android:gravity="center"
+                                android:layout_gravity="center"
+                                android:textColor="#000"
+                                android:layout_marginBottom="5dp"
+                                android:textSize="14dp"/>
+
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        xmlns:cardview="http://schemas.android.com/apk/res-auto"
+                        android:layout_margin="5dp"
+                        app:cardElevation="15dp"
+                        cardview:cardCornerRadius="10dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="100dp"
+                                android:layout_height="120dp"
+                                android:layout_margin="5dp"
+                                android:src="@drawable/beericon"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Kingfisher: 100"
+                                android:gravity="center"
+                                android:layout_gravity="center"
+                                android:textColor="#000"
+                                android:layout_marginBottom="5dp"
+                                android:textSize="14dp"/>
+
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        xmlns:cardview="http://schemas.android.com/apk/res-auto"
+                        android:layout_margin="5dp"
+                        app:cardElevation="15dp"
+                        cardview:cardCornerRadius="10dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="100dp"
+                                android:layout_height="120dp"
+                                android:layout_margin="5dp"
+                                android:src="@drawable/beericon"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Kingfisher: 100"
+                                android:gravity="center"
+                                android:layout_gravity="center"
+                                android:textColor="#000"
+                                android:layout_marginBottom="5dp"
+                                android:textSize="14dp"/>
+
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        xmlns:cardview="http://schemas.android.com/apk/res-auto"
+                        android:layout_margin="5dp"
+                        app:cardElevation="15dp"
+                        cardview:cardCornerRadius="10dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="100dp"
+                                android:layout_height="120dp"
+                                android:layout_margin="5dp"
+                                android:src="@drawable/beericon"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Kingfisher: 100"
+                                android:gravity="center"
+                                android:layout_gravity="center"
+                                android:textColor="#000"
+                                android:layout_marginBottom="5dp"
+                                android:textSize="14dp"/>
+
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+            </HorizontalScrollView>-->
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/bottomnavigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:orientation="horizontal"
+        android:weightSum="15"
+        android:layout_alignParentBottom="true">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="3">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_home_foreground"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Home"
+                android:gravity="center"
+                android:textColor="#fff"
+                android:textSize="13dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="3">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_search_foreground"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Search"
+                android:gravity="center"
+                android:textColor="#fff"
+                android:textSize="13dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="3">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_favourites_foreground"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Favourites"
+                android:gravity="center"
+                android:textColor="#fff"
+                android:textSize="13dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="3">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_offer_foreground"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Offers"
+                android:gravity="center"
+                android:textColor="#fff"
+                android:textSize="13dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="3">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_profile_foreground"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Profile"
+                android:gravity="center"
+                android:textColor="#fff"
+                android:textSize="13dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
