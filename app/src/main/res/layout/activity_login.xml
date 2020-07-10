@@ -133,7 +133,7 @@ android:layout_gravity="center">
             android:textSize="17sp"
             android:text="New user? Register Now"
             android:layout_marginTop="@dimen/loginViewsMargin"
-            android:onClick="onLoginClick"/>
+            android:id="@+id/register_to_login"/>
 
 
         <LinearLayout
