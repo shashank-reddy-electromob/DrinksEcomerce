@@ -16,11 +16,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SucessPageActivity"></activity>
+        <activity android:name=".ProfileActivity"
+            android:theme="@style/AppTheme.NoActionBar" ></activity>
+        <activity android:name=".OffersActivity" />
+        <activity android:name=".FavouriteActivity" />
+        <activity android:name=".SearchActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".SucessPageActivity" />
         <activity
             android:name=".PrivacyPolicy"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".CartActivity" />
+        <activity
+            android:name=".CartActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".NavigationActivity"
             android:theme="@style/AppTheme.NoActionBar" />

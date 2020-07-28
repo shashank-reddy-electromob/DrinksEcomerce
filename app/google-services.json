@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "45159494899",
+    "firebase_url": "https://reciper-f314d.firebaseio.com",
+    "project_id": "reciper-f314d",
+    "storage_bucket": "reciper-f314d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:45159494899:android:3e44eede448041ab547386",
+        "android_client_info": {
+          "package_name": "org.electromob.drinksecomerce"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "45159494899-2a347njgtulf9b6dehr1g05sdkj3qitl.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "org.electromob.drinksecomerce",
+            "certificate_hash": "7364858aa871459da8518e296d5da0a94cdc59b0"
+          }
+        },
+        {
+          "client_id": "45159494899-d9i4m47m695hqprfoi1plml5asv2lfia.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCSylkwKw67pZq20z0j1sI02S66LuJ5ULM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "45159494899-d9i4m47m695hqprfoi1plml5asv2lfia.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

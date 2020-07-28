@@ -66,11 +66,12 @@ android:layout_gravity="center">
         </LinearLayout>
 
             <EditText
-                android:id="@+id/editTextEmail"
-                style="@style/modifiedEditText"
+                android:id="@+id/editTextEmaillogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="3dp"
                 android:inputType="textEmailAddress"
-                android:maxLines="1"
+                android:textSize="18dp"
                 android:hint="@string/login_email_hint"/>
 
         <LinearLayout
@@ -100,11 +101,12 @@ android:layout_gravity="center">
         </LinearLayout>
 
             <EditText
-                android:id="@+id/editTextPassword"
-                style="@style/modifiedEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/editTextPasswordlogin"
                 android:hint="@string/login_password_hint"
+                android:textSize="18dp"
                 android:layout_marginTop="3dp"
-                android:maxLines="1"
                 android:inputType="textPassword"/>
 
         <TextView
@@ -133,7 +135,7 @@ android:layout_gravity="center">
             android:textSize="17sp"
             android:text="New user? Register Now"
             android:layout_marginTop="@dimen/loginViewsMargin"
-            android:id="@+id/register_to_login"/>
+            android:onClick="onLoginClick"/>
 
 
         <LinearLayout
@@ -202,7 +204,7 @@ android:layout_gravity="center">
         android:src="@drawable/ic_add_img"
         android:layout_marginRight="11dp"
         android:layout_marginBottom="30dp"
-        android:onClick="onLoginClick"
+        android:onClick="onLoginClick1"
         android:adjustViewBounds="false"/>
 
 </RelativeLayout>
